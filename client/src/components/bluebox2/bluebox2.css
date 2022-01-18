@@ -1,0 +1,51 @@
+.bb2{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(7,9,51,0.81);
+    padding: 0px 5px 0px 5px;
+}
+.bluebgimg2{
+    background-image: url('https://demos.upperthemes.com/koral/demo1/wp-content/uploads/sites/14/2019/05/projmasonry4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 250%;
+    background-color: rgb(233, 134, 192);
+}
+
+.bb2txt1{
+    font-size: 31px;
+    color: #ffffff;
+    line-height: 1.5em;
+    text-align: center;
+    font-family: 'Montserrat', 'Arial', 'sans-serif';
+    font-weight: 700;
+}
+
+.bb2txt2{
+    font-size: 18px;
+    color: #c8beda;
+    text-align: center;
+    font-family: 'Muli', 'Arial', 'sans-serif';
+    font-weight: normal;
+    margin-bottom: 1em !important;
+}
+
+.bb2btn{
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    padding: 7px 20px 7px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: solid 2px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.bb2btn:hover{
+    background-color: #fa7268;
+    border-color: #fa7268;
+}

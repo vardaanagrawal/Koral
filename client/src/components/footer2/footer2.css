@@ -1,0 +1,15 @@
+.footer2{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.social{
+    margin-top: -20px;
+}
+.social img{
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,168 @@
+.projects {
+    height: auto;
+  }
+  
+  .prohead {
+    width: 100vw;
+    padding-left: 150px;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 150px;
+    letter-spacing: 1;
+  }
+  .proheadimg{
+    position: relative;
+    left: 80px;
+    top: 80px;
+    z-index: -1;
+    width: 110px;
+  }
+  
+  .probody {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .col1 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .col2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .col3 {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .one {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 1s;
+    margin-bottom: 50px;
+  }
+  
+  .two {
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-bottom: 50px;
+  }
+  
+  .three {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-bottom: 50px;
+  }
+  
+  .probody img {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: relative;
+    left: 0;
+    transition: all 0.5s;
+  }
+  
+  .typing {
+    margin-left: 10px;
+    color: white;
+    background-color: #fa7268;
+    padding: 0px 20px 0px 20px;
+  }
+  
+  .prodesc {
+    height: 100%;
+    width: 70%;
+    background-color: rgb(0, 0, 37);
+    position: relative;
+    top: -100%;
+    left: -70%;
+    transition: all 0.5s;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 0;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    z-index: -1;
+  }
+  
+  .one:hover .prodesc {
+    left: 0%;
+  }
+  
+  .two:hover .prodesc {
+    left: 0%;
+  }
+  .three:hover .prodesc {
+    left: 0%;
+  }
+  
+  .one:hover img {
+    left: 20%;
+  }
+  
+  .two:hover img {
+    left: 20%;
+  }
+  
+  .three:hover img {
+    left: 20%;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .probody {
+      flex-direction: column;
+    }
+    .col1,
+    .col2,
+    .col3 {
+      width: 90%;
+      padding: 0px 10% 0px 10%;
+    }
+  
+    .prohead {
+      font-size: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .probody {
+      flex-direction: column;
+    }
+    .col1,
+    .col2,
+    .col3 {
+      width: 100%;
+      padding: 0px 10% 0px 10%;
+    }
+  
+    .prohead {
+      width: 100vw;
+      font-size: 30px;
+      font-weight: 900;
+  
+      margin-bottom: 150px;
+      letter-spacing: 1;
+      padding-left: 80px;
+    }
+    .proheadimg{
+      left: 0
+    }
+  }
+  

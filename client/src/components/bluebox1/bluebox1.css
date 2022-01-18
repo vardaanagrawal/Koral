@@ -1,0 +1,109 @@
+.blue1 {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 80px;
+    background-color: rgba(7, 9, 51, 0.81);
+  }
+  .b1left{
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .b1right{
+    display: flex;
+    align-items: center;
+    width: 50%
+  }
+  
+  .bluebgimg {
+    background-image: url("../images/pro2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 180%;
+    background-color: rgb(233, 134, 192);
+  }
+  
+  .bluecard {
+    width: 300px;
+    margin: 0px 10px 0px 10px;
+  }
+  
+  .cardnum {
+    color: skyblue;
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .cardhead {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+  }
+  .carddesc {
+    font-size: 18px;
+    color: #e8ebed;
+    margin-top: 20px;
+  }
+  
+  @media only screen and (max-width: 990px){
+    .blue1{
+      height: 120vh;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .b1left{
+      height: 50%;
+      width: 100%;
+      justify-content: space-around;
+    }
+    
+    .b1right{
+      height: 50%;
+      width: 100%;
+      justify-content: space-around;
+      
+    }
+    .bluebgimg {
+      background-image: url("https://demos.upperthemes.com/koral/demo1/wp-content/uploads/sites/14/2019/05/projmasonry4.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 90%;
+      background-color: rgb(228, 142, 192);
+    }
+  }
+  
+  
+  @media only screen and (max-width: 575px){
+    .blue1{
+      height: 200vh;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .b1left{
+      height: 50%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    
+    .b1right{
+      height: 50%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      
+    }
+    .bluebgimg {
+      background-image: url("https://demos.upperthemes.com/koral/demo1/wp-content/uploads/sites/14/2019/05/projmasonry4.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 90%;
+      background-color: rgb(228, 142, 192);
+    }
+    .bluecard{
+      width: 90vw;
+    }
+  }
