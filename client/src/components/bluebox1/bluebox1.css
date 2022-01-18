@@ -1,5 +1,5 @@
 .blue1 {
-    height: 65vh;
+    height: auto;
     width: 100%;
     display: flex;
     align-content: center;
@@ -50,7 +50,6 @@
   
   @media only screen and (max-width: 990px){
     .blue1{
-      height: 120vh;
       flex-direction: column;
       justify-content: space-evenly;
     }
@@ -78,7 +77,6 @@
   
   @media only screen and (max-width: 575px){
     .blue1{
-      height: 200vh;
       flex-direction: column;
       justify-content: space-evenly;
     }

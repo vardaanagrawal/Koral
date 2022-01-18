@@ -1,5 +1,5 @@
 #about{
-    height: 150vh;
+    height: auto;
     display: grid;
     grid-template-columns: 2fr 3fr 3fr 2fr 1fr 3fr 3fr 2fr;
     grid-template-rows: 1fr 3fr 1fr 1fr 1fr 3fr 1fr;
@@ -139,7 +139,6 @@
 }
 @media only screen and (max-width: 600px){
     #about{
-        height: 250vh;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 4fr 4fr 1fr 1fr 1fr 4fr 4fr;

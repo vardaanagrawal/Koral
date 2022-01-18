@@ -1,5 +1,5 @@
 .client{
-    height: 100vh;
+    height: 800px;
     background-image: url('../images/clientimg.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 
 
 .carousel{
-    height: 70vh;
+    height: 500px;
     width: 350px;
     display: flex;
     flex-direction: column;

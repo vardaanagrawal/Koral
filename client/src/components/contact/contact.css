@@ -1,5 +1,5 @@
 .contact {
-  height: 150vh;
+  height: auto;
   background: -webkit-linear-gradient(
     top,
     rgb(255, 255, 255) 0%,
@@ -116,9 +116,6 @@ form {
 }
 
 @media only screen and (max-width: 460px) {
-  .contact {
-    height: auto;
-  }
   .form {
     padding: 30px;
     height: 875px;
