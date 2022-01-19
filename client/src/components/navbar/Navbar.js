@@ -1,8 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import koralLogo from "../images/logoKoral.png";
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
+
+
+  useEffect(() => {
+      gsap.fromTo(
+        '.goup',
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: '.home',
+            start: '50vh',
+            toggleActions: 'restart pause pause reverse'
+          }
+
+        }
+  )
+    return
+  }, []);
+  
+
+
+
+
+
   function openslist(n) {
     const slist = document.querySelector(`.slist${n}`);
     slist.style.left = "0px";
@@ -44,6 +73,7 @@ export default function Navbar() {
 
   return (
     <div id="navbar">
+      <div className="goup"><a href="#home">^</a></div>
       <div id="logo">
         <a href="/">
           <img src={koralLogo} alt="Koral" />

@@ -1,13 +1,39 @@
 import './home.css';
-import React from "react";
+import React,{ useEffect } from "react";
 import wlcmspin from '../images/wlcmspin.png';
 import wlcmzigzag2 from '../images/wlcmzigzag2.png';
 import wlcmzigzag from '../images/wlcmzigzag.png';
 import girl from '../images/girl1.png';
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.hellobox',
+      {
+        y: 0
+      },
+      {
+        y: '40%',
+        scrollTrigger: {
+          trigger: '.home',
+          start: '100vh',
+          end: '850vh',
+          scrub: true,
+          toggleActions: 'restart pause pause reverse'
+        }
+
+      }
+)
+  return
+}, []);
+
+
   return (
-    <div id="home">
+    <div id="home" className='home'>
       <div id="s1">
         <div id="spinner1" className="spin"></div>
       </div>
@@ -32,7 +58,7 @@ export default function Home() {
       <div id="arrow">
         <a href="#about">&#8595;</a>
       </div>
-      <div id="hellobox">
+      <div id="hellobox" className='hellobox'>
         <div id="hb-inner1">
           <span id="hbi1span1">hello</span>
           <span id="hbi1span2">.</span>
