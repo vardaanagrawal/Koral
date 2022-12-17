@@ -38,16 +38,25 @@ app.post("/addItem", async (req, res) => {
   newItem.save().then(res.send("Message sent successfully."));
 });
 
-__dirname = path.resolve();
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname,'/client/build')));
+// __dirname = path.resolve();
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname,'/client/build')));
 
-  app.get('*',(req,res) => {
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'));
-  })
-} else {
+//   app.get('*',(req,res) => {
+//     res.sendFile(path.resolve(__dirname,'client','build','index.html'));
+//   })
+// } else {
+//   app.get("/", (req, res) => {
+//     res.send("API running...");
+//   });
+// }
+
+if (process.env.NODE_ENV == "production") {
+  const path = require("path");
+
   app.get("/", (req, res) => {
-    res.send("API running...");
+    app.use(express.static(path.resolve(__dirname, "client", "build")));
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 
