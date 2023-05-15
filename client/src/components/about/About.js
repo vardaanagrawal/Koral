@@ -1,7 +1,5 @@
 import React from "react";
 import "./about.css";
-import Abttopimg from "../images/abttopimg.jpg";
-import Chr1 from "../images/abt-btm-chair.png";
 
 export default function About() {
   return (
@@ -11,7 +9,7 @@ export default function About() {
         <p id="yc">your creativity</p>
       </div>
       <div id="cplimg">
-        <img src={Abttopimg}></img>
+        <img alt="" src="https://res.cloudinary.com/dg1awjvew/image/upload/v1684142301/koral/abttopimg_psr4jd.jpg"></img>
       </div>
       <div className="our" id="our1">
         <div className="ournum">01</div>
@@ -49,7 +47,7 @@ export default function About() {
         <button>GET KORAL</button>
       </div>
       <div id="chrimg">
-        <img src={Chr1}></img>
+        <img alt="" src="https://res.cloudinary.com/dg1awjvew/image/upload/v1684142301/koral/abt-btm-chair_jr7gwr.png"></img>
       </div>
     </div>
     

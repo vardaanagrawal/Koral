@@ -1,36 +1,27 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
-import koralLogo from "../images/logoKoral.png";
-import gsap from 'gsap';
+import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
-
-
   useEffect(() => {
-      gsap.fromTo(
-        '.goup',
-        {
-          opacity: 0
+    gsap.fromTo(
+      ".goup",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".home",
+          start: "50vh",
+          toggleActions: "restart pause pause reverse",
         },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: '.home',
-            start: '50vh',
-            toggleActions: 'restart pause pause reverse'
-          }
-
-        }
-  )
-    return
+      }
+    );
+    return;
   }, []);
-  
-
-
-
-
 
   function openslist(n) {
     const slist = document.querySelector(`.slist${n}`);
@@ -60,7 +51,6 @@ export default function Navbar() {
   const [sb, setsb] = useState(false);
 
   function toggleSB() {
-    const sidebar = document.querySelector(".sidebar");
     if (sb === false) {
       let app = document.querySelector(".App");
       app.style.right = "300px";
@@ -73,31 +63,88 @@ export default function Navbar() {
 
   return (
     <div id="navbar">
-      <div className="goup"><a href="#home">^</a></div>
+      <div className="goup">
+        <a href="#home">^</a>
+      </div>
       <div id="logo">
         <a href="/">
-          <img src={koralLogo} alt="Koral" />
+          <img
+            src="https://res.cloudinary.com/dg1awjvew/image/upload/v1684142301/koral/logoKoral_fgagb5.png"
+            alt="Koral"
+          />
         </a>
       </div>
       <div id="desktop-menu">
-      <div className="dropdown">
+        <div className="dropdown">
           <a href="#" id="dropdownMenuLink" aria-expanded="false">
             HOME<div className="underline"></div>
           </a>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a className="dropdown-item" href="#">Home Page 1</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 2</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 3</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 4</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 5</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 6</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 7</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 8</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 9 (New)</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 10 (New)</a></li>
-            <li><a className="dropdown-item" href="#">Home Page 11 (New)</a></li>
-            <li><a className="dropdown-item" href="#">Home 12 (Mockup)</a></li>
-            <li><a className="dropdown-item" href="#">Home 13 (Isometric)</a></li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 1
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 2
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 3
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 4
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 5
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 6
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 7
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 8
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 9 (New)
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 10 (New)
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home Page 11 (New)
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home 12 (Mockup)
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Home 13 (Isometric)
+              </a>
+            </li>
           </ul>
         </div>
         <div className="dropdown">
@@ -105,10 +152,26 @@ export default function Navbar() {
             PAGES<div className="underline"></div>
           </a>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a className="dropdown-item" href="#">About Pages</a></li>
-            <li><a className="dropdown-item" href="#">Services Pages</a></li>
-            <li><a className="dropdown-item" href="#">Contact Pages</a></li>
-            <li><a className="dropdown-item" href="#">Special Pages</a></li>
+            <li>
+              <a className="dropdown-item" href="#">
+                About Pages
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Services Pages
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Contact Pages
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Special Pages
+              </a>
+            </li>
             <li>
               <a className="dropdown-item" href="#">
                 Project Pages
@@ -570,12 +633,30 @@ export default function Navbar() {
       </div>
       <div className="mobile-menu">
         <div className="flist">
-          <div className="flist-item" onClick={() => openslist(1)}><div>Home</div><div>{">"}</div></div>
-          <div className="flist-item" onClick={() => openslist(2)}><div>Pages</div><div>{">"}</div></div>
-          <div className="flist-item" onClick={() => openslist(3)}><div>Portfolios</div><div>{">"}</div></div>
-          <div className="flist-item" onClick={() => openslist(4)}><div>Headers</div><div>{">"}</div></div>
-          <div className="flist-item" onClick={() => openslist(5)}><div>Elements</div><div>{">"}</div></div>
-          <div className="flist-item" onClick={() => openslist(6)}><div>Blog</div><div>{">"}</div></div>
+          <div className="flist-item" onClick={() => openslist(1)}>
+            <div>Home</div>
+            <div>{">"}</div>
+          </div>
+          <div className="flist-item" onClick={() => openslist(2)}>
+            <div>Pages</div>
+            <div>{">"}</div>
+          </div>
+          <div className="flist-item" onClick={() => openslist(3)}>
+            <div>Portfolios</div>
+            <div>{">"}</div>
+          </div>
+          <div className="flist-item" onClick={() => openslist(4)}>
+            <div>Headers</div>
+            <div>{">"}</div>
+          </div>
+          <div className="flist-item" onClick={() => openslist(5)}>
+            <div>Elements</div>
+            <div>{">"}</div>
+          </div>
+          <div className="flist-item" onClick={() => openslist(6)}>
+            <div>Blog</div>
+            <div>{">"}</div>
+          </div>
         </div>
         <div className="slist1">
           <div className="slist-item" onClick={() => back(1)}>
@@ -654,14 +735,14 @@ export default function Navbar() {
         <img src="https://raw.githubusercontent.com/amitjakhu/dripicons/b8b7035c6c0f34035b0a78af4b393a3fd8628c38/SVG/search.svg" />
         <img src="https://raw.githubusercontent.com/amitjakhu/dripicons/b8b7035c6c0f34035b0a78af4b393a3fd8628c38/SVG/cart.svg" />
         <button className="mmbtn" onClick={toggleMM}>
-        <div id="sideopenbutton">
+          <div id="sideopenbutton">
             <div id="sidetop"></div>
             <div id="sidemiddle"></div>
             <div id="sidebottom"></div>
           </div>
         </button>
         <button className="sbbtn" onClick={toggleSB}>
-        <div id="sideopenbutton">
+          <div id="sideopenbutton">
             <div id="sidetop"></div>
             <div id="sidemiddle"></div>
             <div id="sidebottom"></div>

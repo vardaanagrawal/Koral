@@ -1,6 +1,6 @@
 .client{
     height: 800px;
-    background-image: url('../images/clientimg.jpg');
+    background-image: url('https://res.cloudinary.com/dg1awjvew/image/upload/v1684142301/koral/clientimg_q5ng2q.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;

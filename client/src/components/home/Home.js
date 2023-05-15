@@ -1,9 +1,5 @@
 import './home.css';
 import React,{ useEffect } from "react";
-import wlcmspin from '../images/wlcmspin.png';
-import wlcmzigzag2 from '../images/wlcmzigzag2.png';
-import wlcmzigzag from '../images/wlcmzigzag.png';
-import girl from '../images/girl1.png';
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -38,7 +34,7 @@ export default function Home() {
         <div id="spinner1" className="spin"></div>
       </div>
       <div id="s2">
-        <img src={wlcmspin} className="spin"></img>
+        <img alt="" src="https://res.cloudinary.com/dg1awjvew/image/upload/v1684142302/koral/wlcmspin_art2vt.png" className="spin"></img>
       </div>
       <div id="s3">
         <div id="spinner3" className="spin"></div>
@@ -50,10 +46,10 @@ export default function Home() {
         <div id="spinner5" className="spin"></div>
       </div>
       <div id="s6">
-        <img src={wlcmspin} className="spin"></img>
+        <img alt="" src="https://res.cloudinary.com/dg1awjvew/image/upload/v1684142302/koral/wlcmspin_art2vt.png" className="spin"></img>
       </div>
       <div id="s7">
-        <img src={wlcmzigzag2} className="spin"></img>
+        <img alt="" src="https://res.cloudinary.com/dg1awjvew/image/upload/v1684142303/koral/wlcmzigzag2_spwmwu.png" className="spin"></img>
       </div>
       <div id="arrow">
         <a href="#about">&#8595;</a>
@@ -68,10 +64,10 @@ export default function Home() {
           <br /> design agncy <u>from Portugal.</u>
         </div>
         <div style={{ marginTop: "5vh" }}>
-          <img style={{ width: "50px" }} src={wlcmzigzag}></img>
+          <img alt="" style={{ width: "50px" }} src="https://res.cloudinary.com/dg1awjvew/image/upload/v1684142302/koral/wlcmzigzag_vf572e.png"></img>
         </div>
       </div>
-      <img className="imgbox" src={girl}></img>
+      <img alt="" className="imgbox" src="https://res.cloudinary.com/dg1awjvew/image/upload/v1684142302/koral/girl1_nnxnrv.png"></img>
     </div>
   );
 }
